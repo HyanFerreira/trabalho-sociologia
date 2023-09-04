@@ -1,36 +1,301 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: rgb(0, 0, 0);
+  transition: ease-in-out 0.2s;
 }
 
-.nav-menu {
-    width: 100%;
-    height: 100px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+.nav-sustentabilidade {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-sustentabilidade img {
+  width: 600px;
 }
 
 .banner {
-    width: 100%;
-    height: 630px;
-    background-image: url(../img/banner-sustentabilidade.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  max-width: 1920px;
+  max-height: 630px;
+}
+
+.nav-menu {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: white;
 }
 
 .main {
-    width: 100%;
-    height: auto;
-    background-color: black;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .container-sustentabilidade {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.block-sustentabilidade {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-sustentabilidade p {
+  padding: 10px 0 0 0;
+  text-align: justify;
+}
+
+.block-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-img img {
+  width: 35%;
+}
+
+.block-sustentabilidade, .block-img {
+  width: 800px;
+}
+
+.container-vision {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.block-hans,
+.block-krenak {
+  width: 800px;
+}
+
+.block-hans p,
+.block-krenak p {
+  padding: 10px 0 0 0;
+  text-align: justify;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer h1,
+.footer p {
+  color: white;
+}
+
+.footer p {
+  padding: 10px 0 0 0;
+}
+
+.container-seasons, .container-fails {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+}
+
+.container-participants {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.model-participants {
+  order: 2;
+}
+
+.model-participants:first-child {
+  order: 1;
+}
+
+.model-participants:last-child {
+  order: 3;
+}
+
+.model-participants {
+  width: 250px;
+  height: 400px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+}
+
+.model-perfil {
+  width: 100%;
+  height: 150px;
+  background-color: #4dbf7a;
+  border-radius: 15px 15px 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil {
+  width: 115px;
+  height: 115px;
+  background-color: white;
+  border: 5px solid #7bd758;
+  border-radius: 50%;
+}
+
+.model-bio {
+  width: 100%;
+  height: 250px;
+  padding: 15px 20px;
+}
+
+.bio h1 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.bio p {
+  font-size: .9rem;
+  padding-top: 10px;
+  text-align: justify;
+}
+
+#prevButton,
+#nextButton {
+  margin: 0 10px; /* Espaço entre os botões e os cards */
+  padding: 10px 20px;
+  background-color: #4dbf7a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#prevButton:hover,
+#nextButton:hover {
+  background-color: #3a9e61;
+}
+
+@media (max-width: 1000px) {
+  .container-vision {
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .block-hans,
+  .block-krenak {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .block-sustentabilidade,
+  .block-img {
+    width: 100%;
+    justify-content: center;
+  }
+  .block-img img {
+    width: 290px;
+    height: auto;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  .nav-sustentabilidade img {
+    width: 500px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-sustentabilidade {
+    height: 70px;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .block-img img {
+    width: 50%;
+  }
+  .nav-sustentabilidade img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-sustentabilidade img {
+    width: 300px;
+  }
 }
