@@ -1,27 +1,33 @@
-const carousel = document.getElementById('carousel');
-const prevButton = document.getElementById('prevButton');
-const nextButton = document.getElementById('nextButton');
+const controls = document.querySelectorAll('.control');
+let currentModel = 0;
+const models = document.querySelectorAll('.model-team');
+const maxModels = models.length;
 
-let currentIndex = 0; // Índice atual do carrossel
+controls.forEach(control => {
+    control.addEventListener('click', () => {
+        const isLeft = control.classList.contains('arrow-left');
 
-// Função para avançar para o próximo item
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % carousel.children.length;
-    updateCarousel();
-}
+        if (isLeft) {
+            currentModel -= 1;
+        } else {
+            currentModel += 1;
+        }
 
-// Função para voltar para o item anterior
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + carousel.children.length) % carousel.children.length;
-    updateCarousel();
-}
+        if (currentModel >= maxModels) {
+            currentModel = 0;
+        }
 
-// Função para atualizar a exibição do carrossel
-function updateCarousel() {
-    const translateX = -currentIndex * 270; // Largura do item + espaço entre os itens
-    carousel.style.transform = `translateX(${translateX}px)`;
-}
+        if (currentModel < 0) {
+            currentModel = maxModels -1;
+        }
 
-// Adicione ouvintes de eventos aos botões
-prevButton.addEventListener('click', prevSlide);
-nextButton.addEventListener('click', nextSlide);
+        models.forEach(model => model.classList.remove('current-model-team'));
+
+        models[currentModel].scrollIntoView({
+            inline: "center",
+            behavior: "smooth"
+        });
+
+        models[currentModel].classList.add('current-model-team');
+    });
+});
