@@ -382,3 +382,9 @@ h1 {
     width: 350px;
   }
 }
+
+@media (max-width: 400px) {
+  .nav-sustentabilidade img {
+    width: 300px;
+  }
+}
