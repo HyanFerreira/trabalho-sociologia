@@ -87,7 +87,7 @@ h1 {
 }
 
 .a-link::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 2px;
@@ -96,7 +96,7 @@ h1 {
   left: 0;
   background-color: #4dbf7a;
   transform-origin: bottom right;
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .a-link:hover::before {
@@ -262,10 +262,19 @@ h1 {
 }
 
 .perfil {
-  width: 115px;
-  height: 115px;
+  width: 125px;
+  height: 125px;
   background-color: white;
   border: 5px solid #7bd758;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil img {
+  width: 115px;
+  height: auto;
   border-radius: 50%;
 }
 
