@@ -231,7 +231,7 @@ h1 {
 }
 
 .container-model-team {
-  width: 100%;
+  width: 1105px;
   display: flex;
   flex-flow: row nowrap;
   gap: 25px;
@@ -318,9 +318,6 @@ h1 {
   .arrow-right {
     display: flex;
   }
-  .container-model-team {
-    width: 200%;
-  }
 }
 
 @media (max-width: 1000px) {
@@ -375,13 +372,13 @@ h1 {
   .nav-sustentabilidade img {
     width: 400px;
   }
-  .container-model-team {
-    width: 314%;
-  }  
+  .nav-menu {
+    height: auto;
+  }
 }
 
 @media (max-width: 500px) {
   .nav-sustentabilidade img {
-    width: 300px;
+    width: 370px;
   }
 }
